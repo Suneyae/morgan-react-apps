@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",  // React 17+ 推荐，无需手动导入 React
+    "module": "ESNext",
+    "baseUrl": "src",    // 配置 src 为模块根路径，简化导入
+    "strict": true,      // 开启严格类型检查，强制显式导入
+    "noImplicitAny": true,
+    "moduleResolution": "Node", // 按 Node.js 规则解析模块
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*"], // 确保所有 src 下的文件都被校验
+  "exclude": ["node_modules"]
+}

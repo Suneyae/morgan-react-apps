@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
+import { useState, useEffect, useRef, createContext, useContext } from 'react';
 import './App.css';
+import Popup from 'Popup';
 
 // 1. 创建Context（用于跨组件状态共享）
-const ThemeContext = createContext();
+const ThemeContext = createContext('light');
 
 // 子组件：演示父传子、子传父、useContext
 function TodoItem({ todo, onDelete, onToggle }) {
@@ -104,6 +105,7 @@ function App() {
   };
 
   return (
+    <>
     // 8. Context.Provider：提供全局状态
     <ThemeContext.Provider value={{ isDark, setIsDark }}>
       <div style={{ 
@@ -158,6 +160,9 @@ function App() {
         </div>
       </div>
     </ThemeContext.Provider>
+
+    <Popup></Popup>
+    </>
   );
 }
 
