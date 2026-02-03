@@ -9,6 +9,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
+  "allowImportingTsExtensions": true,
   "include": ["src/**/*"], // 确保所有 src 下的文件都被校验
   "exclude": ["node_modules"]
 }
